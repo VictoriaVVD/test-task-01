@@ -1,0 +1,8 @@
+.row>div {
+    min-height: 20px;
+    margin: 5px;
+    border: 1px solid #000000;
+}
+div.b-dashed {
+    border: 1px dashed #000000;
+}
