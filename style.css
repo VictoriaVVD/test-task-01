@@ -1,8 +1,39 @@
-.row>div {
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-weight: 400;
+}
+.container {
+    padding: 20px 50px;
+}
+.block {
     min-height: 20px;
     border: 1px solid #000000;
 }
-div.b-dashed {
+.heading__wrapper {
+    max-height: 3em;
+}
+.b-dashed {
     border: 1px dashed #000000;
 }
 .modal__container {

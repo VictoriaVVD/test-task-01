@@ -1,9 +1,10 @@
 $(document).ready(function() {
+    $(".btn-1").on("click", toggleHeading);
     function toggleHeading() {
         $(".heading__wrapper").toggle();
+        $(".section__container").toggleClass("mt-5");
     }
-    $(".btn-1").on("click", toggleHeading);
-    
+    $(".btn-2").on("click", changeBlocks);
     function changeBlocks() {
         const box = $(".section__container");
         if (box.children().eq(0).hasClass("b-dashed")) {
@@ -15,8 +16,6 @@ $(document).ready(function() {
             box.find(box.children().eq(1)).removeClass("b-dashed");
         }
     }
-    $(".btn-2").on("click", changeBlocks);
-
 
     const modal = $(".modal__container");
     const closeBtn = $(".btn_close");
@@ -24,5 +23,4 @@ $(document).ready(function() {
         modal.hide();
     }
     closeBtn.on( "click", closeWindow);
-
 })
