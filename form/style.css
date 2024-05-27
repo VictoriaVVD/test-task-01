@@ -1,0 +1,14 @@
+.container {
+    display: inline-flex;
+    flex-direction: column;
+}
+form {
+    display: inline-flex;
+    flex-direction: column;
+    max-width: 30%;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.info__block {
+    font-size: 14px;
+}
