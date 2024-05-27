@@ -4,7 +4,7 @@ const form = document.querySelector("#myForm");
 function serializeForm(formNode) {
     return new FormData(formNode);
 }
-async function handleFormSubmit(event) {
+function handleFormSubmit(event) {
     event.preventDefault()
     const data = serializeForm(event.target);
     var xhr = new XMLHttpRequest();

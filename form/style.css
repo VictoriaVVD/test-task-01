@@ -1,12 +1,12 @@
 .container {
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
 }
 form {
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
-    max-width: 30%;
     gap: 10px;
+    max-width: 30%;
     margin-bottom: 20px;
 }
 .info__block {
