@@ -12,3 +12,6 @@ form {
 .info__block {
     font-size: 14px;
 }
+select {
+    padding: 5px;
+}
