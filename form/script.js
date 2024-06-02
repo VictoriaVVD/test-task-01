@@ -1,4 +1,4 @@
-const form = document.querySelector("#myForm");
+const form = document.forms.myForm;
 const output = document.querySelector("#result");
 
 function serializeForm(formNode) {
