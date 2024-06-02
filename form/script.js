@@ -17,7 +17,7 @@ form.addEventListener("submit", handleFormSubmit);
 function sendRequest(method, url, body = null) {
     return new Promise((resolve, reject) => {
         const xhr = new XMLHttpRequest();
-        xhr.open(method, url, true);
+        xhr.open(method, url + formatParams(body), true);
         xhr.onload = () => {
             if (xhr.status === 200) {
                 resolve(xhr.response)
@@ -38,4 +38,15 @@ function sendRequest(method, url, body = null) {
 function onSuccess(data) {
     output.innerHTML = "<h2 class='info__block'>Отправленные данные: </h2>";
     output.append(JSON.stringify(Object.fromEntries(data.entries())));
+}
+
+function formatParams( formData ){
+    const data = Object.fromEntries(formData.entries());
+    const params = "?" + Object
+        .keys(data)
+        .map(function(key){
+        return key + "=" + encodeURIComponent(data[key])
+        })
+        .join("&");
+        return params;
 }
