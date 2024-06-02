@@ -5,20 +5,13 @@ function toggleHeading() {
 }
 btn01.addEventListener("click", toggleHeading);
 
-
 const btn02 = document.querySelector(".btn-2");
-const gridContainer = document.querySelector(".grid__container");
-const list = Array.from(document.querySelectorAll(".grid__item"));
-function changeBlocks() {
-    const arr = list.slice(1, 3).reverse();
-    list.splice(1, 2, ...arr);
-    for (let i = 0; i < list.length; i++) {
-        console.log(list[i]);
-        gridContainer.append(list[i]);
-    }
+const block03 = document.querySelector(".block-3");
+function changeOrder() {
+    let order = getComputedStyle(block03).order;
+    block03.style.order = -order;
 }
-btn02.addEventListener("click", changeBlocks);
-
+btn02.addEventListener("click", changeOrder);
 
 const btnClose = document.querySelector(".btn_close");
 const modalContainer = document.querySelector(".modal__container");
