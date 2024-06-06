@@ -48,5 +48,6 @@ function formatParams( formData ){
         return key + "=" + encodeURIComponent(data[key])
         })
         .join("&");
+        console.log(params);
         return params;
 }

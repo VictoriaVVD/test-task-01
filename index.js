@@ -1,15 +1,14 @@
 const heading = document.querySelector(".heading");
 const btn01 = document.querySelector(".btn-1");
-function toggleHeading() {
+function hideHeading() {
     heading.classList.toggle("hide");
 }
-btn01.addEventListener("click", toggleHeading);
+btn01.addEventListener("click", hideHeading);
 
 const btn02 = document.querySelector(".btn-2");
 const block03 = document.querySelector(".block-3");
 function changeOrder() {
-    let order = getComputedStyle(block03).order;
-    block03.style.order = -order;
+    block03.classList.toggle("up-front");
 }
 btn02.addEventListener("click", changeOrder);
 
